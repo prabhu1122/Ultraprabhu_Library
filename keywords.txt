@@ -1,0 +1,16 @@
+##########################################
+# Syntax Coloring Map For ExampleLibrary #
+##########################################
+
+Ultrasenc KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+
+distFind KEYWORD2
+distFind_cm KEYWORD2
+distFind_inch KEYWORD2
+distFind_feet KEYWORD2
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
