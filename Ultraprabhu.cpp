@@ -30,9 +30,10 @@ void Ultrasenc::distFind(){
 
 float Ultrasenc::distFind_cm(){
 
-  digitalWrite(_trig,HIGH);
-  delay(10);
-  digitalWrite(_trig,LOW);
+  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
+  delay(10);                 // put a delay of 10 millisecond
+  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+
 
   _duration = pulseIn(_echo,HIGH)/2;
   cm = _duration/29;
@@ -43,9 +44,10 @@ float Ultrasenc::distFind_cm(){
 
 float Ultrasenc::distFind_inch(){
 
-  digitalWrite(_trig,HIGH);
-  delay(10);
-  digitalWrite(_trig,LOW);
+  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
+  delay(10);                 // put a delay of 10 millisecond
+  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+
 
   _duration = pulseIn(_echo,HIGH)/2;
   inch = _duration/72;
@@ -55,9 +57,10 @@ float Ultrasenc::distFind_inch(){
 
 float Ultrasenc::distFind_feet(){
 
-  digitalWrite(_trig,HIGH);
-  delay(10);
-  digitalWrite(_trig,LOW);
+  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
+  delay(10);                 // put a delay of 10 millisecond
+  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+
 
   _duration = pulseIn(_echo,HIGH)/2;
   feet = _duration/(72*12);
