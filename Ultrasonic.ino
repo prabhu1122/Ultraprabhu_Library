@@ -1,5 +1,5 @@
 #include <Ultraprabhu.h>
-Ultrasenc ultra(10,11);
+Ultrasenc ultra(10,11); //ultra(triggerPin,echoPin);
 
 float feetDist;
 void setup() {
