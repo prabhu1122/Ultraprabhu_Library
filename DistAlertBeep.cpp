@@ -1,17 +1,21 @@
 
+///////**Prabhat Yadav**///////
 #include <Ultraprabhu.h>
 
 Ultrasenc ultra(10,11); //ultra(triggerPin,echoPin);
  
-#define led 9
-#define buzzerPin 12
-float cmDist = 0; //initialise feetDist
-
+#define led 9        //set pin for 
+#define buzzerPin 12 
+float cmDist = 0;    //initialise feetDist
+float val = 0;
+float val1 = 0;
+int threshold = 50; //minimum length to detect;
 void setup() { 
     //Serial.begin(9600);
     ultra.begin(9600); //set baudRate 9600
     pinMode(led,OUTPUT);
     pinMode(buzzerPin,OUTPUT);
+    analogWrite(led,0);
 }
     
 void loop() { 
@@ -19,19 +23,20 @@ void loop() {
         cmDist = ultra.distFind_cm(); 
     
         //Print value of distance in feet on serial monitor; 
-    
-        float val = map(cmDist,20,0,0,255);
+        val = map(cmDist,threshold,0,0,255);
+        
+        //val1 value buzzer to make delay for put buzzerpin in low state; 
+        val1 = map(cmDist,threshold,0,255,0);
+        
         //give the analogvalue of val on led pin;
+        if(cmDist<=threshold){
         analogWrite(led,val);
-        
-        //
-        if(val<20){
-        
-        float beep = map(cmDist,20,0,1000,50);
-        buzzer(beep);
-        
+        buzzer(val1);
         }
-    //print the value of distance on the serial monitor;
+        else if(cmDist>threshold){
+          analogWrite(led,0);
+        }
+        //print the value of distance on the serial monitor;
         Serial.println(cmDist); 
 }
 
