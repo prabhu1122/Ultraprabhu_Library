@@ -9,8 +9,8 @@
  
 //creat a class 
 
-class Ultrasenc{              
-  //code written in this section can be use in main sketch
+class Ultrasenc{       
+ 
   public:
   //public Properties
          int x;
@@ -19,15 +19,14 @@ class Ultrasenc{
          float inch;
          float feet;
   //public Methods
-         Ultrasenc(int,int);                //constructor
-         void distFind();                   //method for find distance has no return type 
-         float distFind_cm();               //another method to find dist in cm and return type is float
-         float distFind_inch();             //another method to find dist in inch and return type is float 
-         float distFind_feet();             //another method to find dist in feet and return type is float 
-         void begin(int baudRate = 9600);   //set the baudRate for serial moniter default value is 9600
+         Ultrasenc(int,int);               
+         void distFind();
+         float distFind_cm();               
+         float distFind_inch();             
+         float distFind_feet();             
+         void begin(int baudRate = 9600);   
 
   private:
-  //code written in this section can't be use in main sketch
   //Private Properties 
          unsigned long _duration;
          int _trig;
