@@ -1,5 +1,5 @@
-#ifndef tl
-#define tl
+#ifndef Ultraprabhu_H
+#define Ultraprabhu_H
 
  #if(ARDUINO >= 100)
    #include "Arduino.h"
