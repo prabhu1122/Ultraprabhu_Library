@@ -1,6 +1,7 @@
-#include "Ultraprabhu.h"            //include the library for ultasenc
+#include "Ultraprabhu.h"    
+#include "Arduino.h"
 
-Ultrasenc::Ultrasenc(int x,int y){  //create a constructor for the class Ultrasenc
+Ultrasenc::Ultrasenc(int x,int y){  //create a constructor
   
   _trig = x;
   _echo = y; 
@@ -10,9 +11,9 @@ Ultrasenc::Ultrasenc(int x,int y){  //create a constructor for the class Ultrase
 
 void Ultrasenc::distFind(){
 
-  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
-  delay(10);                 // put a delay of 10 millisecond
-  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+  digitalWrite(_trig,HIGH);  
+  delay(10);                 
+  digitalWrite(_trig,LOW);   
 
   _duration = pulseIn(_echo,HIGH)/2;   //check the duration of echopin to be high   
 
@@ -30,9 +31,9 @@ void Ultrasenc::distFind(){
 
 float Ultrasenc::distFind_cm(){
 
-  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
-  delay(10);                 // put a delay of 10 millisecond
-  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+  digitalWrite(_trig,HIGH);  
+  delay(10);                 
+  digitalWrite(_trig,LOW);   
 
 
   _duration = pulseIn(_echo,HIGH)/2;
@@ -44,9 +45,9 @@ float Ultrasenc::distFind_cm(){
 
 float Ultrasenc::distFind_inch(){
 
-  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
-  delay(10);                 // put a delay of 10 millisecond
-  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+  digitalWrite(_trig,HIGH);  
+  delay(10);                 
+  digitalWrite(_trig,LOW);   
 
 
   _duration = pulseIn(_echo,HIGH)/2;
@@ -57,9 +58,9 @@ float Ultrasenc::distFind_inch(){
 
 float Ultrasenc::distFind_feet(){
 
-  digitalWrite(_trig,HIGH);  //sets the trigger pin high or 1;
-  delay(10);                 // put a delay of 10 millisecond
-  digitalWrite(_trig,LOW);   //sets the trigger pin low or 0;
+  digitalWrite(_trig,HIGH);  
+  delay(10);                 
+  digitalWrite(_trig,LOW);   
 
 
   _duration = pulseIn(_echo,HIGH)/2;
